@@ -1,18 +1,41 @@
-.container
-  %h1 Welcome to the BBC Capstone Project Homepage!
-  %h1 This is testing HAML
-
-  %p
-    Click here for
-    =link_to "how to add Bootstrap to your existing RoR app.", "https://medium.freecodecamp.org/add-bootstrap-to-your-ruby-on-rails-project-8d76d70d0e3b"
-
-  =link_to "PDF file link", "test_pdf.pdf"
-
-  .row.justify-content-center
-    =image_tag "odell_headshot.png", size: "100x100"
-    =image_tag "gibson_headshot.png", size: "100x100"
-    =image_tag "adair_headshot.png", size: "100x100"
-    =image_tag "chulani_headshot.png", size: "100x100"
-    =image_tag "iyizoba_headshot.png", size: "100x100"
-    =image_tag "hashi_headshot.png", size: "100x100"
-    =image_tag "blank_headshot.png", size: "100x100"
+.row.pt-3
+  .col-md-1.p-0.ml-5
+    .flex-row
+      %h5 Resources:
+    .flex-row
+      =link_to "PDF file link", "test_pdf.pdf"
+  .col-lg-6.p-0.ml-5
+    %h3 Welcome to the BBC Capstone Project Homepage!
+    %h3 This is testing HAML
+    %p
+      Click here for
+      =link_to "how to add Bootstrap to your existing RoR app.", "https://medium.freecodecamp.org/add-bootstrap-to-your-ruby-on-rails-project-8d76d70d0e3b"
+  .col-md-3.ml-5
+    .row.justify-content-start
+      .flex-col
+        .flex-row
+          =image_tag "odell_headshot.png", size: "100x100"
+      .flex-col.pl-3
+        .flex-row
+          Zachary X. Odell
+        .flex-row
+          responsibilities...
+        .flex-row
+          responsibilities...
+        .flex-row
+          =image_tag "linkedin_logo.png", size: "20x20"
+    %br
+    .row.justify-content-start
+      .flex-col
+        .flex-row
+          =image_tag "gibson_headshot.png", size: "100x100"
+      .flex-col.pl-3
+        .flex-row
+          Zachary X. Odell
+        .flex-row
+          responsibilities...
+        .flex-row
+          responsibilities...
+        .flex-row
+          =image_tag "linkedin_logo.png", size: "20x20"
+    %br
