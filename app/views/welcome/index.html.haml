@@ -1,37 +1,18 @@
-%h1 Welcome to the BBC Capstone Project Homepage!
-%h1 This is testing HAML
+.container
+  %h1 Welcome to the BBC Capstone Project Homepage!
+  %h1 This is testing HAML
 
-%p
-  Click here for
-  =link_to "how to add Bootstrap to your existing RoR app.", "https://medium.freecodecamp.org/add-bootstrap-to-your-ruby-on-rails-project-8d76d70d0e3b"
+  %p
+    Click here for
+    =link_to "how to add Bootstrap to your existing RoR app.", "https://medium.freecodecamp.org/add-bootstrap-to-your-ruby-on-rails-project-8d76d70d0e3b"
 
-=link_to "PDF file link", "test_pdf.pdf"
+  =link_to "PDF file link", "test_pdf.pdf"
 
-- 2.times do
-  %br
-=image_tag "odell_headshot.png", width: "100"
-asdf asdf asdf asdf asdf asdf asdf asdf asdf
-- 2.times do
-  %br
-=image_tag "gibson_headshot.png", width: "100"
-asdf asdf asdf asdf asdf asdf asdf asdf asdf
-- 2.times do
-  %br
-=image_tag "adair_headshot.png", width: "100"
-asdf asdf asdf asdf asdf asdf asdf asdf asdf
-- 2.times do
-  %br
-=image_tag "chulani_headshot.png", width: "100"
-asdf asdf asdf asdf asdf asdf asdf asdf asdf
-- 2.times do
-  %br
-=image_tag "iyizoba_headshot.png", width: "100"
-asdf asdf asdf asdf asdf asdf asdf asdf asdf
-- 2.times do
-  %br
-=image_tag "hashi_headshot.png", width: "100"
-asdf asdf asdf asdf asdf asdf asdf asdf asdf
-- 2.times do
-  %br
-=image_tag "blank_headshot.png", width: "100"
-asdf asdf asdf asdf asdf asdf asdf asdf asdf
+  .row.justify-content-center
+    =image_tag "odell_headshot.png", size: "100x100"
+    =image_tag "gibson_headshot.png", size: "100x100"
+    =image_tag "adair_headshot.png", size: "100x100"
+    =image_tag "chulani_headshot.png", size: "100x100"
+    =image_tag "iyizoba_headshot.png", size: "100x100"
+    =image_tag "hashi_headshot.png", size: "100x100"
+    =image_tag "blank_headshot.png", size: "100x100"

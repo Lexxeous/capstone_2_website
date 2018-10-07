@@ -8,11 +8,14 @@ git_source(:github) do |repo_name|
 end
 
 ruby "2.5.0"
+gem "bootstrap"
+
 # Use CoffeeScript for .coffee assets and views
 gem "coffee-rails", "~> 4.2"
 gem "haml"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "jbuilder", "~> 2.5"
+gem "jquery-rails"
 # Use Puma as the app server
 gem "puma", "~> 3.7"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
