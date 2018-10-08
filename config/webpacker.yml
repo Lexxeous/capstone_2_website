@@ -1,0 +1,11 @@
+development:
+  <<: *default
+  compile: true
+
+test:
+  <<: *default
+  compile: true
+
+production:
+  <<: *default
+  compile: false
