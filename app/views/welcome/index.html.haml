@@ -18,7 +18,7 @@
             %li
               =link_to "Project Presentation", "test_pdf.pdf"
             %li
-              =link_to "CAD Diagrams", "test_pdf.pdf"
+              =link_to "AutoCAD Diagrams", "test_pdf.pdf"
         .flex-row
           %h5 Online Resources:
         .flex-row
@@ -67,6 +67,7 @@
           %h5 Hardware Used:
           .row.justify-content-center
             =image_tag "hardware.png", size: "250x425"
+          %br
           %ul
             %li
               =link_to "Arduino Uno", "https://store.arduino.cc/usa/arduino-uno-rev3"
@@ -80,21 +81,51 @@
             %li Color Coated Connecting Copper Wiring
             %li whatever those blue tube connecty things are called
           %h5 Software Used:
-
-
-      .col-md-4.p-3.team
+          .row.justify-content-start.pl-3
+            .flex-col.pr-3
+              .flex-row
+                =image_tag "arduino_logo.png", size: "80x80"
+            .flex-col.bio
+              .flex-row
+                =link_to "Arduino IDE", "https://www.arduino.cc/en/Main/Software"
+          %br
+          .row.justify-content-start.pl-3
+            .flex-col.pr-3
+              .flex-row
+                =image_tag "autocad_logo.png", size: "80x80"
+            .flex-col.bio
+              .flex-row
+                =link_to "AutoCAD", "https://www.autodesk.com/products/autocad/overview"
+          %br
+          .row.justify-content-start.pl-3
+            .flex-col.pr-3
+              .flex-row
+                =image_tag "draw_io_logo.png", size: "80x80"
+            .flex-col.bio
+              .flex-row
+                =link_to "draw.io", "https://www.draw.io/"
+          %br
+          .row.justify-content-start.pl-3
+            .flex-col.pr-3
+              .flex-row
+                =image_tag "google_apps_logo.png", size: "80x60"
+            .flex-col.bio
+              .flex-row
+                =link_to "Google Apps", "https://apps.google.com/user/hub"
+          %br
+      .col-md-4.p-3
         .row.justify-content-start
           %h4 Meet the Team:
         .row.justify-content-start
           .flex-col.pr-3
             .flex-row
               =image_tag "odell_headshot.png", size: "100x100"
-          .flex-col
-            .flex-row.pt-1
+          .flex-col.bio
+            .flex-row
               %b Zachary M. O'Dell
-            .flex-row.pt-1.duties
-              %i Team Lead, Logistics Manager, Software Implementation.
             .flex-row.pt-1
+              %i Team Lead, Logistics Manager, Software Implementation.
+            .flex-row
               =link_to "zmodell42@students.tntech.edu", "mailto:zmodell42@students.tntech.edu"
             .flex-row.pt-1
               =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
@@ -104,12 +135,12 @@
           .flex-col.pr-3
             .flex-row
               =image_tag "gibson_headshot.png", size: "100x100"
-          .flex-col
-            .flex-row.pt-1
+          .flex-col.bio
+            .flex-row
               %b Jonathan A. Gibson
-            .flex-row.pt-1.duties
-              %i File Manager, Web Designer, Hardware Tester.
             .flex-row.pt-1
+              %i Asst. Team Lead, File Manager, Web Designer, Hardware Tester.
+            .flex-row
               =link_to "jagibson44@students.tntech.edu", "mailto:jagibson44@students.tntech.edu"
             .flex-row.pt-1
               =link_to (image_tag "linkedin_logo.png", size: "20x20"), "https://www.linkedin.com/in/lexxeous/"
@@ -119,12 +150,12 @@
           .flex-col.pr-3
             .flex-row
               =image_tag "adair_headshot.png", size: "100x100"
-          .flex-col
-            .flex-row.pt-1
+          .flex-col.bio
+            .flex-row
               %b Joshua P. Adair
-            .flex-row.pt-1.duties
-              %i Arduino & Software Research and Implementation.
             .flex-row.pt-1
+              %i Arduino & Software Research and Implementation.
+            .flex-row
               =link_to "jpadair42@students.tntech.edu", "mailto:jpadair42@students.tntech.edu"
             .flex-row.pt-1
               =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
@@ -134,12 +165,12 @@
           .flex-col.pr-3
             .flex-row
               =image_tag "chulani_headshot.png", size: "100x100"
-          .flex-col
-            .flex-row.pt-1
+          .flex-col.bio
+            .flex-row
               %b Naveen M. Chulani
-            .flex-row.pt-1.duties
-              %i Hardware Researcher, Presentation Lead.
             .flex-row.pt-1
+              %i Hardware Researcher, Presentation Lead.
+            .flex-row
               =link_to "nmchulani42@students.tntech.edu", "mailto:nmchulani42@students.tntech.edu"
             .flex-row.pt-1
               =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
@@ -149,12 +180,12 @@
           .flex-col.pr-3
             .flex-row
               =image_tag "iyizoba_headshot.png", size: "100x100"
-          .flex-col
-            .flex-row.pt-1
+          .flex-col.bio
+            .flex-row
               %b Clinton C. Iyizoba
-            .flex-row.pt-1.duties
-              %i Hardware Researcher, Asst. Presentation Lead.
             .flex-row.pt-1
+              %i Hardware Researcher, Asst. Presentation Lead.
+            .flex-row
               =link_to "cciyizoba42@students.tntech.edu", "mailto:cciyizoba42@students.tntech.edu"
             .flex-row.pt-1
               =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
@@ -164,12 +195,12 @@
           .flex-col.pr-3
             .flex-row
               =image_tag "hashi_headshot.png", size: "100x100"
-          .flex-col
-            .flex-row.pt-1
+          .flex-col.bio
+            .flex-row
               %b Fahmi I. Hashi
-            .flex-row.pt-1.duties
-              %i Hardware Constructor, Designer, & Tester.
             .flex-row.pt-1
+              %i Hardware Constructor, Designer, & Tester.
+            .flex-row
               =link_to "fihashi42@students.tntech.edu", "mailto:fihashi42@students.tntech.edu"
             .flex-row.pt-1
               =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
@@ -179,20 +210,19 @@
           .flex-col.pr-3
             .flex-row
               =image_tag "blank_headshot.png", size: "100x100"
-          .flex-col
-            .flex-row.pt-1
+          .flex-col.bio
+            .flex-row
               %b Jeff C. Tilley
-            .flex-row.pt-1.duties
-              %i CAD Diagram & Hardware Designer.
             .flex-row.pt-1
+              %i CAD Diagram Creator, Hardware Constructor & Designer.
+            .flex-row
               =link_to "jctilley42@students.tntech.edu", "mailto:jctilley42@students.tntech.edu"
             .flex-row.pt-1
               =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
               =link_to (image_tag "facebook_logo.png", size: "20x20"), welcome_path
-        %br
     .row.pt-3.justify-content-center
       %i Special thanks to Tennessee Technological University, Dr. Michael A. Baswell,
     .row.p-0.justify-content-center
       %i and the Electrical & Computer Engineering department for sponsoring this project.
     .row.py-3.justify-content-center
-      =image_tag "ttu_logo.png", size: "200x200"
+      =link_to (image_tag "ttu_logo.png", size: "150x150"), "https://www.tntech.edu/"
