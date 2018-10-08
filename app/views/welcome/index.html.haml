@@ -1,194 +1,198 @@
-.flex-row
-  =image_tag "circuit_banner.png"
-.container-fluid
-  .row.pt-3.justify-content-between
-    .col-md-2.p-3
-      .flex-row
-        %h5 Document Resources:
-      .flex-row
-        %ul
-          %li
-            =link_to "Test PDF", "test_pdf.pdf"
-          %li
-            =link_to "Project Paper", "test_pdf.pdf"
-          %li
-            =link_to "Project Poster", "test_pdf.pdf"
-          %li
-            =link_to "Project Presentation", "test_pdf.pdf"
-          %li
-            =link_to "CAD Diagrams", "test_pdf.pdf"
-      .flex-row
-        %h5 Online Resources:
-      .flex-row
-        %ul
-          %li
-            =link_to "Raw Source Code", "BBC_src_code.txt"
-          %li
-            =link_to "Source Code GitHub Repo", "https://github.com/Lexxeous/capstone_2_arduino"
-          %li
-            =link_to "Website GitHub Repo", "https://github.com/Lexxeous/capstone_2_website"
-    .col-md-5
-      %h2 Welcome to the BBC Capstone Project Homepage!
-      %h5 Project Description:
-      %p
-        The Automatic Generator Battery Backup Charger (or simply
-        =succeed "," do
+.welcome
+  .container-fluid
+    .row#banner
+      =image_tag "circuit_banner.png"
+  .container-fluid
+    .row.pt-3.justify-content-between
+      .col-md-2.p-3
+        .flex-row
+          %h5 Document Resources:
+        .flex-row
+          %ul
+            %li
+              =link_to "Test PDF", "test_pdf.pdf"
+            %li
+              =link_to "Project Paper", "test_pdf.pdf"
+            %li
+              =link_to "Project Poster", "test_pdf.pdf"
+            %li
+              =link_to "Project Presentation", "test_pdf.pdf"
+            %li
+              =link_to "CAD Diagrams", "test_pdf.pdf"
+        .flex-row
+          %h5 Online Resources:
+        .flex-row
+          %ul
+            %li
+              =link_to "Raw Source Code", "BBC_src_code.txt"
+            %li
+              =link_to "Source Code GitHub Repo", "https://github.com/Lexxeous/capstone_2_arduino"
+            %li
+              =link_to "Website GitHub Repo", "https://github.com/Lexxeous/capstone_2_website"
+      .col-md-5
+        %h2 Welcome to the BBC Capstone Project Homepage!
+        %h5 Project Description:
+        %p
+          The Automatic Generator Battery Backup Charger (or simply
+          =succeed "," do
+            %b BBC
+          as we call it) is a hardware system regulated by an
+          =link_to "Adruino Uno", "https://store.arduino.cc/usa/arduino-uno-rev3"
+          microcontroller.
+          %br
+          %br
+          The
           %b BBC
-        as we call it) is a hardware system regulated by an
-        =link_to "Adruino Uno", "https://store.arduino.cc/usa/arduino-uno-rev3"
-        microcontroller.
-        %br
-        %br
-        The
-        %b BBC
-        connects to general purpose generators and monitors the charge of the internal battery. When the charge of the battery drops below a threshold of
-        =succeed "," do
-          %i 11.5V
-        the
-        %b BBC
-        attempts to automatically fire-up the generator for a user specified amount of time. Once the charge on the internal battery reaches a separate threshold of
-        =succeed "," do
-          %i 14.0V
-        the
-        %b BBC
-        turns off the generator and waits for the voltage to deplete again, and repeats.
-        %br
-        %br
-        An
-        =link_to "Arduino LCD Keypad Shield", "https://www.dfrobot.com/wiki/index.php/Arduino_LCD_KeyPad_Shield_(SKU:_DFR0009)"
-        shows live information about the charge of the generator's internal battery and allows the user to control the starter time. If the attached generator does not start within the alotted amount of time and iterations, the
-        %b BBC
-        system displays an error message (
-        %i Starter Failure!
-        ) and the system must be reset. This is to reduce the likelyhood of the starter and generator from burning out.
+          connects to general purpose generators and monitors the charge of the internal battery. When the charge of the battery drops below a threshold of
+          =succeed "," do
+            %i 11.5V
+          the
+          %b BBC
+          attempts to automatically fire-up the generator for a user specified amount of time. Once the charge on the internal battery reaches a separate threshold of
+          =succeed "," do
+            %i 14.0V
+          the
+          %b BBC
+          turns off the generator and waits for the voltage to deplete again, and repeats.
+          %br
+          %br
+          An
+          =link_to "Arduino LCD Keypad Shield", "https://www.dfrobot.com/wiki/index.php/Arduino_LCD_KeyPad_Shield_(SKU:_DFR0009)"
+          shows live information about the charge of the generator's internal battery and allows the user to control the starter time. If the attached generator does not start within the alotted amount of time and iterations, the
+          %b BBC
+          system displays an error message (
+          %i Starter Failure!
+          ) and the system must be reset. This is to reduce the likelyhood of the starter and generator from burning out.
 
-        %h5 Hardware Used:
-        .row.justify-content-center
-          =image_tag "hardware.png", size: "250x425"
-        %ul
-          %li
-            =link_to "Arduino Uno", "https://store.arduino.cc/usa/arduino-uno-rev3"
-          %li
-            =link_to "Arduino LCD Keypad Shield", "https://www.dfrobot.com/wiki/index.php/Arduino_LCD_KeyPad_Shield_(SKU:_DFR0009)"
-          %li
-            =link_to "SUPERNIGHT (12V~24V DC) to (5V, 10A DC) 50W Converter", "https://www.newegg.com/Product/Product.aspx?Item=0SW-004G-000B9"
-          %li 2 5V Relays
-          %li 1 120V AC Relay
-          %li 1 xV Red LED
-          %li Color Coated Connecting Copper Wiring
-          %li whatever those blue tube connecty things are called
-        %h5 Software Used:
+          %h5 Hardware Used:
+          .row.justify-content-center
+            =image_tag "hardware.png", size: "250x425"
+          %ul
+            %li
+              =link_to "Arduino Uno", "https://store.arduino.cc/usa/arduino-uno-rev3"
+            %li
+              =link_to "Arduino LCD Keypad Shield", "https://www.dfrobot.com/wiki/index.php/Arduino_LCD_KeyPad_Shield_(SKU:_DFR0009)"
+            %li
+              =link_to "SUPERNIGHT (12V~24V DC) to (5V, 10A DC) 50W Converter", "https://www.newegg.com/Product/Product.aspx?Item=0SW-004G-000B9"
+            %li 2 5V Relays
+            %li 1 120V AC Relay
+            %li 1 xV Red LED
+            %li Color Coated Connecting Copper Wiring
+            %li whatever those blue tube connecty things are called
+          %h5 Software Used:
 
 
-    .col-md-4.p-3
-      .row.justify-content-start
-        %h4 Meet the Team:
-      .row.justify-content-start
-        .flex-col
-          .flex-row
-            =image_tag "odell_headshot.png", size: "100x100"
-        .flex-col.pl-3
-          .flex-row
-            %b Zachary M. O'Dell
-          .flex-row
-            %i Team Lead, Logistics Manager, Software Implementation.
-          .flex-row
-            =link_to "zmodell42@students.tntech.edu", "mailto:zmodell42@students.tntech.edu"
-          .flex-row
-            =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
-            =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/zac.odell.1"
-      %br
-      .row.justify-content-start
-        .flex-col
-          .flex-row
-            =image_tag "gibson_headshot.png", size: "100x100"
-        .flex-col.pl-3
-          .flex-row
-            %b Jonathan A. Gibson
-          .flex-row
-            %i File Manager, Web Designer, Hardware Tester.
-          .flex-row
-            =link_to "jagibson44@students.tntech.edu", "mailto:jagibson44@students.tntech.edu"
-          .flex-row
-            =link_to (image_tag "linkedin_logo.png", size: "20x20"), "https://www.linkedin.com/in/lexxeous/"
-            =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/Lexxeous"
-      %br
-      .row.justify-content-start
-        .flex-col
-          .flex-row
-            =image_tag "adair_headshot.png", size: "100x100"
-        .flex-col.pl-3
-          .flex-row
-            %b Joshua P. Adair
-          .flex-row
-            %i Arduino & Software Research and Implementation.
-          .flex-row
-            =link_to "jpadair42@students.tntech.edu", "mailto:jpadair42@students.tntech.edu"
-          .flex-row
-            =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
-            =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/joshua.adair.71"
-      %br
-      .row.justify-content-start
-        .flex-col
-          .flex-row
-            =image_tag "chulani_headshot.png", size: "100x100"
-        .flex-col.pl-3
-          .flex-row
-            %b Naveen M. Chulani
-          .flex-row
-            %i Hardware Researcher, Presentation Lead.
-          .flex-row
-            =link_to "nmchulani42@students.tntech.edu", "mailto:nmchulani42@students.tntech.edu"
-          .flex-row
-            =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
-            =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/naveen.chulani"
-      %br
-      .row.justify-content-start
-        .flex-col
-          .flex-row
-            =image_tag "iyizoba_headshot.png", size: "100x100"
-        .flex-col.pl-3
-          .flex-row
-            %b Clinton C. Iyizoba
-          .flex-row
-            %i Hardware Researcher, Asst. Presentation Lead.
-          .flex-row
-            =link_to "cciyizoba42@students.tntech.edu", "mailto:cciyizoba42@students.tntech.edu"
-          .flex-row
-            =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
-            =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/chikwelueze.iyizoba"
-      %br
-      .row.justify-content-start
-        .flex-col
-          .flex-row
-            =image_tag "hashi_headshot.png", size: "100x100"
-        .flex-col.pl-3
-          .flex-row
-            %b Fahmi I. Hashi
-          .flex-row
-            %i Hardware Constructor, Designer, & Tester.
-          .flex-row
-            =link_to "fihashi42@students.tntech.edu", "mailto:fihashi42@students.tntech.edu"
-          .flex-row
-            =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
-            =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/fahmii2"
-      %br
-      .row.justify-content-start
-        .flex-col
-          .flex-row
-            =image_tag "blank_headshot.png", size: "100x100"
-        .flex-col.pl-3
-          .flex-row
-            %b Jeff C. Tilley
-          .flex-row
-            %i CAD Diagram & Hardware Designer.
-          .flex-row
-            =link_to "jctilley42@students.tntech.edu", "mailto:jctilley42@students.tntech.edu"
-          .flex-row
-            =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
-            =link_to (image_tag "facebook_logo.png", size: "20x20"), welcome_path
-      %br
-  .row.pt-3.justify-content-center
-    %i Special thanks to Tennessee Technological University, Dr. Michael A. Baswell, and the Electrical & Computer Engineering department for sponsoring this project.
-  .row.pt-3.justify-content-center
-    =image_tag "ttu_logo.png", size: "200x200"
+      .col-md-4.p-3.team
+        .row.justify-content-start
+          %h4 Meet the Team:
+        .row.justify-content-start
+          .flex-col.pr-3
+            .flex-row
+              =image_tag "odell_headshot.png", size: "100x100"
+          .flex-col
+            .flex-row.pt-1
+              %b Zachary M. O'Dell
+            .flex-row.pt-1.duties
+              %i Team Lead, Logistics Manager, Software Implementation.
+            .flex-row.pt-1
+              =link_to "zmodell42@students.tntech.edu", "mailto:zmodell42@students.tntech.edu"
+            .flex-row.pt-1
+              =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
+              =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/zac.odell.1"
+        %br
+        .row.justify-content-start
+          .flex-col.pr-3
+            .flex-row
+              =image_tag "gibson_headshot.png", size: "100x100"
+          .flex-col
+            .flex-row.pt-1
+              %b Jonathan A. Gibson
+            .flex-row.pt-1.duties
+              %i File Manager, Web Designer, Hardware Tester.
+            .flex-row.pt-1
+              =link_to "jagibson44@students.tntech.edu", "mailto:jagibson44@students.tntech.edu"
+            .flex-row.pt-1
+              =link_to (image_tag "linkedin_logo.png", size: "20x20"), "https://www.linkedin.com/in/lexxeous/"
+              =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/Lexxeous"
+        %br
+        .row.justify-content-start
+          .flex-col.pr-3
+            .flex-row
+              =image_tag "adair_headshot.png", size: "100x100"
+          .flex-col
+            .flex-row.pt-1
+              %b Joshua P. Adair
+            .flex-row.pt-1.duties
+              %i Arduino & Software Research and Implementation.
+            .flex-row.pt-1
+              =link_to "jpadair42@students.tntech.edu", "mailto:jpadair42@students.tntech.edu"
+            .flex-row.pt-1
+              =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
+              =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/joshua.adair.71"
+        %br
+        .row.justify-content-start
+          .flex-col.pr-3
+            .flex-row
+              =image_tag "chulani_headshot.png", size: "100x100"
+          .flex-col
+            .flex-row.pt-1
+              %b Naveen M. Chulani
+            .flex-row.pt-1.duties
+              %i Hardware Researcher, Presentation Lead.
+            .flex-row.pt-1
+              =link_to "nmchulani42@students.tntech.edu", "mailto:nmchulani42@students.tntech.edu"
+            .flex-row.pt-1
+              =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
+              =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/naveen.chulani"
+        %br
+        .row.justify-content-start
+          .flex-col.pr-3
+            .flex-row
+              =image_tag "iyizoba_headshot.png", size: "100x100"
+          .flex-col
+            .flex-row.pt-1
+              %b Clinton C. Iyizoba
+            .flex-row.pt-1.duties
+              %i Hardware Researcher, Asst. Presentation Lead.
+            .flex-row.pt-1
+              =link_to "cciyizoba42@students.tntech.edu", "mailto:cciyizoba42@students.tntech.edu"
+            .flex-row.pt-1
+              =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
+              =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/chikwelueze.iyizoba"
+        %br
+        .row.justify-content-start
+          .flex-col.pr-3
+            .flex-row
+              =image_tag "hashi_headshot.png", size: "100x100"
+          .flex-col
+            .flex-row.pt-1
+              %b Fahmi I. Hashi
+            .flex-row.pt-1.duties
+              %i Hardware Constructor, Designer, & Tester.
+            .flex-row.pt-1
+              =link_to "fihashi42@students.tntech.edu", "mailto:fihashi42@students.tntech.edu"
+            .flex-row.pt-1
+              =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
+              =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/fahmii2"
+        %br
+        .row.justify-content-start
+          .flex-col.pr-3
+            .flex-row
+              =image_tag "blank_headshot.png", size: "100x100"
+          .flex-col
+            .flex-row.pt-1
+              %b Jeff C. Tilley
+            .flex-row.pt-1.duties
+              %i CAD Diagram & Hardware Designer.
+            .flex-row.pt-1
+              =link_to "jctilley42@students.tntech.edu", "mailto:jctilley42@students.tntech.edu"
+            .flex-row.pt-1
+              =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
+              =link_to (image_tag "facebook_logo.png", size: "20x20"), welcome_path
+        %br
+    .row.pt-3.justify-content-center
+      %i Special thanks to Tennessee Technological University, Dr. Michael A. Baswell,
+    .row.p-0.justify-content-center
+      %i and the Electrical & Computer Engineering department for sponsoring this project.
+    .row.py-3.justify-content-center
+      =image_tag "ttu_logo.png", size: "200x200"
