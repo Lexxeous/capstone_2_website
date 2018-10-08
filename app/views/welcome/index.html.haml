@@ -43,17 +43,17 @@
           %br
           The
           %b BBC
-          connects to general purpose generators and monitors the charge of the internal battery. When the charge of the battery drops below a threshold of
+          system connects to general purpose generators and monitors the charge of the generator's internal battery. When the charge of the battery drops below a threshold of
           =succeed "," do
             %i 11.5V
           the
           %b BBC
-          attempts to automatically fire-up the generator for a user specified amount of time. Once the charge on the internal battery reaches a separate threshold of
+          system attempts to automatically start up the generator for a user specified amount of time. If the generator starts and the internal battery reaches a separate threshold of
           =succeed "," do
             %i 14.0V
           the
           %b BBC
-          turns off the generator and waits for the voltage to deplete again, and repeats.
+          system turns off the generator and waits for the voltage to deplete again, then repeats.
           %br
           %br
           An
@@ -62,7 +62,7 @@
           %b BBC
           system displays an error message (
           %i Starter Failure!
-          ) and the system must be reset. This is to reduce the likelyhood of the starter and generator from burning out.
+          ) and the system must be reset. This feature is to help reduce the likelyhood of the starter and generator burning out during operation.
 
           %h5 Hardware Used:
           .row.justify-content-center
@@ -80,38 +80,81 @@
             %li 1 xV Red LED
             %li Color Coated Connecting Copper Wiring
             %li whatever those blue tube connecty things are called
+            %li power supply of a certain kind
+            %li NxM metal base plate
+            %li connecting screws
+            %li generator simulator
+            %li power supply leads
           %h5 Software Used:
-          .row.justify-content-start.pl-3
+          .row.justify-content-start.align-items-center.pl-3
             .flex-col.pr-3
               .flex-row
                 =image_tag "arduino_logo.png", size: "80x80"
             .flex-col.bio
               .flex-row
                 =link_to "Arduino IDE", "https://www.arduino.cc/en/Main/Software"
+                %br
+                For modifying, uploading, and testing software for the BBC system.
           %br
-          .row.justify-content-start.pl-3
+          .row.justify-content-start.align-items-center.pl-3
             .flex-col.pr-3
               .flex-row
                 =image_tag "autocad_logo.png", size: "80x80"
             .flex-col.bio
               .flex-row
                 =link_to "AutoCAD", "https://www.autodesk.com/products/autocad/overview"
+                %br
+                For designing and drafting official pinout diagrams to represent the BBC system.
           %br
-          .row.justify-content-start.pl-3
+          .row.justify-content-start.align-items-center.pl-3
             .flex-col.pr-3
               .flex-row
                 =image_tag "draw_io_logo.png", size: "80x80"
             .flex-col.bio
               .flex-row
                 =link_to "draw.io", "https://www.draw.io/"
+                %br
+                For designing and drafting overview connection diagrams to represent the BBC system.
           %br
-          .row.justify-content-start.pl-3
+          .row.justify-content-start.align-items-center.pl-3
+            .flex-col.pr-3
+              .flex-row
+                =image_tag "github_logo.png", size: "80x80"
+            .flex-col.bio
+              .flex-row
+                =link_to "GitHub", "https://github.com"
+                %br
+                For storing backups of and committing changes to all BBC project source code.
+          %br
+          .row.justify-content-start.align-items-center.pl-3
             .flex-col.pr-3
               .flex-row
                 =image_tag "google_apps_logo.png", size: "80x60"
             .flex-col.bio
               .flex-row
                 =link_to "Google Apps", "https://apps.google.com/user/hub"
+                %br
+                For creating, sharing, storing, and managing files amongst all team members for the BBC project.
+          %br
+          .row.justify-content-start.align-items-center.pl-3
+            .flex-col.pr-3
+              .flex-row.pr-3
+                =image_tag "heroku_logo.png", size: "62x75"
+            .flex-col.bio
+              .flex-row
+                =link_to "Heroku", "https://dashboard.heroku.com/"
+                %br
+                For publically creating, deploying, and testing the BBC project homepage website.
+          %br
+          .row.justify-content-start.align-items-center.pl-3
+            .flex-col.pr-3
+              .flex-row.pr-3
+                =image_tag "ror_logo.png", size: "62x75"
+            .flex-col.bio
+              .flex-row
+                =link_to "Ruby on Rails", "https://rubyonrails.org/"
+                %br
+                For locally designing, creating, and testing the BBC project homepage website.
           %br
       .col-md-4.p-3
         .row.justify-content-start
@@ -128,7 +171,7 @@
             .flex-row
               =link_to "zmodell42@students.tntech.edu", "mailto:zmodell42@students.tntech.edu"
             .flex-row.pt-1
-              =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
+              =link_to (image_tag "grey_linkedin_logo.png", size: "20x20"), welcome_path
               =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/zac.odell.1"
         %br
         .row.justify-content-start
@@ -139,7 +182,7 @@
             .flex-row
               %b Jonathan A. Gibson
             .flex-row.pt-1
-              %i Asst. Team Lead, File Manager, Web Designer, Hardware Tester.
+              %i Asst. Team Lead, File Manager, Web Designer, Software Tester.
             .flex-row
               =link_to "jagibson44@students.tntech.edu", "mailto:jagibson44@students.tntech.edu"
             .flex-row.pt-1
@@ -158,7 +201,7 @@
             .flex-row
               =link_to "jpadair42@students.tntech.edu", "mailto:jpadair42@students.tntech.edu"
             .flex-row.pt-1
-              =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
+              =link_to (image_tag "grey_linkedin_logo.png", size: "20x20"), welcome_path
               =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/joshua.adair.71"
         %br
         .row.justify-content-start
@@ -173,7 +216,7 @@
             .flex-row
               =link_to "nmchulani42@students.tntech.edu", "mailto:nmchulani42@students.tntech.edu"
             .flex-row.pt-1
-              =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
+              =link_to (image_tag "grey_linkedin_logo.png", size: "20x20"), welcome_path
               =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/naveen.chulani"
         %br
         .row.justify-content-start
@@ -188,7 +231,7 @@
             .flex-row
               =link_to "cciyizoba42@students.tntech.edu", "mailto:cciyizoba42@students.tntech.edu"
             .flex-row.pt-1
-              =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
+              =link_to (image_tag "grey_linkedin_logo.png", size: "20x20"), welcome_path
               =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/chikwelueze.iyizoba"
         %br
         .row.justify-content-start
@@ -203,7 +246,7 @@
             .flex-row
               =link_to "fihashi42@students.tntech.edu", "mailto:fihashi42@students.tntech.edu"
             .flex-row.pt-1
-              =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
+              =link_to (image_tag "grey_linkedin_logo.png", size: "20x20"), welcome_path
               =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/fahmii2"
         %br
         .row.justify-content-start
@@ -218,8 +261,8 @@
             .flex-row
               =link_to "jctilley42@students.tntech.edu", "mailto:jctilley42@students.tntech.edu"
             .flex-row.pt-1
-              =link_to (image_tag "linkedin_logo.png", size: "20x20"), welcome_path
-              =link_to (image_tag "facebook_logo.png", size: "20x20"), welcome_path
+              =link_to (image_tag "grey_linkedin_logo.png", size: "20x20"), welcome_path
+              =link_to (image_tag "grey_facebook_logo.png", size: "20x20"), welcome_path
     .row.pt-3.justify-content-center
       %i Special thanks to Tennessee Technological University, Dr. Michael A. Baswell,
     .row.p-0.justify-content-center
