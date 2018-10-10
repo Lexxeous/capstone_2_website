@@ -1,0 +1,29 @@
+Get resistor values
+  (2x Purple Green Orange Gold) for the voltage divider... 75kΩ ± 5% (https://www.digikey.com/product-detail/en/stackpole-electronics-inc/CF14JT75K0/CF14JT75K0CT-ND/)
+  (1x Red Black Black Black Brown) for the LED... 200Ω ± 1% (https://www.digikey.com/product-detail/en/vishay-bc-components/SFR16S0002000FR500/PPC200XCT-ND/)
+
+28x Dinkle circuit terminals 20A max (https://www.dinkle.com/en/terminal/DK4N)
+  DIN mounting rail (Deutsches Institut für Normung (DIN)) (https://www.dinkle.com/en/Terminal_3/TS-35N)
+  DSS4N-02P Bussmann Terminal Block Jumper Bars(https://www.galco.com/buy/Bussmann/DSS4N-02P)
+
+Double pole double throw 120V AC Relay Cutler-Hammer (D42RPA) (2920Y8) ??????
+  mounting board
+  https://www.omega.com/pptst/XRU1H.html ?????
+
+2x Songle SRD-05VDC-SL-C Relay (https://www.newegg.com/Product/Product.aspx?Item=9SIA6RP36W3562)
+  mounting board https://www.newegg.com/Product/Product.aspx?Item=9SIA9083852861
+
+tektronix PS283 DC power supply (https://www.used-line.com/power-supplies/tektronix/tektronix-ps283/item-11173482)
+
+Pomona B-24 male to male daisy chain test leads (https://www.digikey.com/product-detail/en/pomona-electronics/B-24-2/501-1046-ND/)
+
+5V red LED (https://hobbyking.com/en_us/led-5mm-red.html)
+
+
+The starter time is inaccurate, should be 2~3 seconds in tenths of second intervals
+
+User specified:
+min voltage (x~x)?
+max voltage (x~x)?
+delay time (5~45 seconds)?
+starter time (2~3 seconds)
