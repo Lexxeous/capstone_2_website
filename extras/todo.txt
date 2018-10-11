@@ -1,14 +1,15 @@
 Get resistor values
-  (2x Purple Green Orange Gold) for the voltage divider... 75kΩ ± 5% (https://www.digikey.com/product-detail/en/stackpole-electronics-inc/CF14JT75K0/CF14JT75K0CT-ND/)
+  (1x Purple Green Orange Gold) for the voltage divider... 75kΩ ± 5% (https://www.digikey.com/product-detail/en/stackpole-electronics-inc/CF14JT75K0/CF14JT75K0CT-ND/)
   (1x Red Black Black Black Brown) for the LED... 200Ω ± 1% (https://www.digikey.com/product-detail/en/vishay-bc-components/SFR16S0002000FR500/PPC200XCT-ND/)
+  (1x Brown Green Orange Gold) for Voltage divider 15kΩ ± 5% (https://www.digikey.com/product-detail/en/stackpole-electronics-inc/CF18JT15K0/CF18JT15K0CT-ND)
 
 28x Dinkle circuit terminals 20A max (https://www.dinkle.com/en/terminal/DK4N)
-  DIN mounting rail (Deutsches Institut für Normung (DIN)) (https://www.dinkle.com/en/Terminal_3/TS-35N)
+  21.5cm DIN mounting rail (Deutsches Institut für Normung (DIN)) (https://www.dinkle.com/en/Terminal_3/TS-35N)
   DSS4N-02P Bussmann Terminal Block Jumper Bars(https://www.galco.com/buy/Bussmann/DSS4N-02P)
 
-Double pole double throw 120V AC Relay Cutler-Hammer (D42RPA) (2920Y8) ??????
-  mounting board
-  https://www.omega.com/pptst/XRU1H.html ?????
+DPDT 120V AC Relay Cutler-Hammer (D4PR2A) (2920Y8)
+  mounting board (omron P2RF-08-E)
+  https://www.newark.com/eaton-cutler-hammer/d4pr2a/relay-dpdt-240vac-30vdc-5a-socket/dp/46K6469
 
 2x Songle SRD-05VDC-SL-C Relay (https://www.newegg.com/Product/Product.aspx?Item=9SIA6RP36W3562)
   mounting board https://www.newegg.com/Product/Product.aspx?Item=9SIA9083852861
@@ -19,8 +20,14 @@ Pomona B-24 male to male daisy chain test leads (https://www.digikey.com/product
 
 5V red LED (https://hobbyking.com/en_us/led-5mm-red.html)
 
+23cm x 14.7cm metal Plate
+
+banana clamps (https://www.alliedelec.com/mueller-bu-60s/70188573/)
 
 The starter time is inaccurate, should be 2~3 seconds in tenths of second intervals
+the ON/OFF relay is not reading the generator status properly, read the status duing menu and bootup too
+define an absolute range for the minimum and maximum threshold values, delay time and starter time
+  (right now they diverge ±infinitely)
 
 User specified:
 min voltage (x~x)?
