@@ -20,6 +20,8 @@
               =link_to "Wiring Overview Diagram", "test_pdf.pdf"
             %li
               =link_to "AutoCAD Diagrams", "test_pdf.pdf"
+            %li
+              =link_to "Source Code Flow Chart", "test_pdf.pdf"
         .flex-row
           %h5 Online Resources:
         .flex-row
@@ -38,20 +40,20 @@
         %p
           The Automatic Generator Battery Backup Controller (or simply
           =succeed "," do
-            %b BBC
+            %i BBC
           as we call it) is a hardware system regulated by an
           =succeed "." do
             =link_to "Adruino Uno Microcontroller", "https://store.arduino.cc/usa/arduino-uno-rev3"
           %br
           %br
           The
-          %b BBC
+          %i BBC
           system connects to general purpose generators and monitors an external battery's voltage. When the external battery's voltage drops below a user specified threshold (
           %i xx.xV ~ 11.5V
           =succeed "," do
             )
           the
-          %b BBC
+          %i BBC
           system activates the generator's starter, for a user specified amount of time (
           %i 2.0s ~ 3.0s
           =succeed "," do
@@ -61,26 +63,26 @@
           =succeed "," do
             )
           the
-          %b BBC
+          %i BBC
           system powers off the generator and waits for the external battery's voltage to deplete again, then repeats. If the generator fails to power on, the
-          %b BBC
+          %i BBC
           system delays for a user specified amount of time (
           %i xx ~ 30s
           =succeed "," do
             )
           before activating the generator's starter again. The
-          %b BBC
+          %i BBC
           system is only allowed 3 iterations of failed starter attempts in succession before displaying an error and taking appropriate action.
           %br
           %br
           An
           =link_to "Arduino LCD Keypad Shield Display", "https://www.dfrobot.com/wiki/index.php/Arduino_LCD_KeyPad_Shield_(SKU:_DFR0009)"
           shows live information about the external battery's voltage and allows the user to control the minimum and maximum generator threshold voltages, the between-iteration delay time, and the generator's starter duration. If the attached generator does not power on within the alotted amount of starter time and iterations, the
-          %b BBC
+          %i BBC
           system displays an error message (
           %i Starter Failure!
           ), lights up the red LED indicator, and halts itself to be reset. The
-          %b BBC
+          %i BBC
           system reset feature is to help reduce the likelyhood of the starter or generator burning out during operation.
           -#------------------------------------------------------------------------------------------------------------------------------------------------------------------
           %h5 Hardware Used:
@@ -93,78 +95,189 @@
               %li
                 01×
                 =link_to "Arduino Uno Microcontroller", "https://store.arduino.cc/usa/arduino-uno-rev3"
+                (
+                %i $22.00
+                )
               %li
                 01×
-                =link_to "Arduino LCD Keypad Shield Display", "https://www.dfrobot.com/wiki/index.php/Arduino_LCD_KeyPad_Shield_(SKU:_DFR0009)"
+                =link_to "Arduino LCD Keypad Shield Display", "https://www.dfrobot.com/product-51.html"
+                (
+                %i $9.90
+                )
+              (
+              %i $31.90
+              )
             %b Converters:
             %ul
               %li
                 01×
                 =link_to "SUPERNIGHT 12V~24V DC to 5V DC Voltage Regulator", "https://www.newegg.com/Product/Product.aspx?Item=0SW-004G-000B9"
+                (
+                %i $12.99
+                )
+              (
+              %i $12.99
+              )
             %b Relays:
             %ul
               %li
                 02×
                 =link_to "Songle SRD-05VDC-SL-C Relays", "https://www.newegg.com/Product/Product.aspx?Item=9SIA6RP36W3562"
+                (
+                %i $4.99
+                )
               %li
                 01×
                 =link_to "Cutler-Hammer DPDT 120V AC Relay", "https://www.newark.com/eaton-cutler-hammer/d4pr2a/relay-dpdt-240vac-30vdc-5a-socket/dp/46K6469"
+                (
+                %i $15.70
+                )
+              (
+              %i $25.68
+              )
             %b Terminal Hardware:
             %ul
               %li
                 28×
-                =link_to "Dinkle DK4N DIN Rail Terminal Blocks", "https://www.dinkle.com/en/terminal/DK4N"
+                =link_to "Dinkle DK4N DIN Rail Terminal Blocks", "https://www.amazon.com/Dinkle-DK4N-BL-Terminal-Block-10-22AWG/dp/B00R1WU460/"
+                (
+                %i $41.21
+                )
+              (
+              %i $41.21
+              )
             %b Mounting Hardware:
             %ul
               %li
                 01×
                 =link_to "Deutsches Institut für Normung (DIN) Mounting Rail", "https://www.dinkle.com/en/Terminal_3/TS-35N"
-                (≥ 21.5cm)
+                (
+                %i ≥ 21.5cm
+                )
+                (
+                %i $00.00
+                )
               %li
                 02×
                 =link_to "YKS 5V Active Low 1 Channel Relay Module Mounting Boards", "https://www.newegg.com/Product/Product.aspx?Item=9SIA9083852861"
+                (
+                %i $00.00
+                )
               %li
                 01×
                 =link_to "Omron P2RF-08-E Relay Socket", "https://www.digikey.com/product-detail/en/omron-automation-and-safety/P2RF-08-E/Z207-ND/"
-              %li 01× (23.0cm x 14.7cm x 0.2cm) Metal Base Plate
-              %li Mounting Screws and Bolts (as needed)
+                (
+                %i $00.00
+                )
+              %li
+                01× Metal Base Plate
+                (
+                %i 23.0cm x 14.7cm x 0.2cm
+                )
+              %li
+                Mounting Screws and Bolts
+                (
+                %i as needed
+                )
+              (
+              %i $00.00
+              )
             %b Power:
             %ul
               %li
                 01×
                 =link_to "Tektronix PS283 DC Power Supply", "https://www.used-line.com/power-supplies/tektronix/tektronix-ps283/item-11173482"
+                (
+                %i $00.00
+                )
               %li
-                01× 120V AC 60Hz Wall Socket (for simulating powered generator signal)
+                01× 120V AC 60Hz Wall Socket
+                (
+                %i for simulating powered generator signal
+                )
+              (
+              %i $00.00
+              )
             %b Connectivity:
             %ul
               %li
                 02×
                 =link_to "Pomona B-24 Banana to Banana Power Supply Test Leads", "https://www.digikey.com/product-detail/en/pomona-electronics/B-24-2/501-1046-ND/"
+                (
+                %i $00.00
+                )
               %li
                 02×
                 =link_to "Banana Barrel Alligator Clips", "https://www.alliedelec.com/mueller-bu-60s/70188573/"
+                (
+                %i $00.00
+                )
               %li
                 01×
                 =link_to "75kΩ ± 5% Resistor", "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/CF14JT75K0/CF14JT75K0CT-ND/"
-                for Voltage Divider (VGrOGld)
+                (
+                %i for voltage divider
+                )
+                (
+                %i $00.00
+                )
               %li
                 01×
                 =link_to "15kΩ ± 5% Resistor", "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/CF18JT15K0/CF18JT15K0CT-ND"
-                for Voltage Divider (BrGrOGld)
+                (
+                %i for voltage divider
+                )
+                (
+                %i $00.00
+                )
               %li
                 01×
                 =link_to "200Ω ± 1% Resistor", "https://www.digikey.com/product-detail/en/vishay-bc-components/SFR16S0002000FR500/PPC200XCT-ND/"
-                for Red LED (RBkBkBkBr)
-              %li
+                (
+                %i for red LED
+                )
+                (
+                %i $00.00
+                )
+              %li.consumer
                 =link_to "Bussmann DSS4N-02P Terminal Block Jumper Bars", "https://www.galco.com/buy/Bussmann/DSS4N-02P"
-                (as needed)
-              %li Rubber Color-Coated Copper Wiring (as needed)
+                (
+                %i as needed
+                )
+              %li.consumer
+                Rubber Color-Coated Copper Wiring
+                (
+                %i as needed
+                )
+              (
+              %i $00.00
+              )
             %b Miscellaneous:
             %ul
               %li
                 01×
                 =link_to "5V DC Red LED", "https://hobbyking.com/en_us/led-5mm-red.html"
-              %li 120V AC 60Hz ON/OFF Switch (for simulating generator status)
+                (
+                %i $00.00
+                )
+              %li.prototype
+                120V AC 60Hz ON/OFF Switch
+                (
+                %i for simulating generator status
+                )
+              (
+              %i $00.00
+              )
+            %br
+            %u Prototype Total:
+            (
+            %b.prototype $00.00
+            )
+            %br
+            %u Optimized Consumer Total:
+            (
+            %b.consumer $00.00
+            )
           -#------------------------------------------------------------------------------------------------------------------------------------------------------------------
           %h5 Software Used:
           .row.justify-content-start.align-items-center.pl-3
@@ -252,6 +365,7 @@
             .flex-row
               =link_to "zmodell42@students.tntech.edu", "mailto:zmodell42@students.tntech.edu"
             .flex-row.pt-1
+              =link_to (image_tag "grey_handshake_logo.png", size: "20x20"), welcome_path
               =link_to (image_tag "grey_linkedin_logo.png", size: "20x20"), welcome_path
               =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/zac.odell.1"
         %br
@@ -267,6 +381,7 @@
             .flex-row
               =link_to "jagibson44@students.tntech.edu", "mailto:jagibson44@students.tntech.edu"
             .flex-row.pt-1
+              =link_to (image_tag "handshake_logo.png", size: "20x20"), "https://tntech.joinhandshake.com/users/7599825"
               =link_to (image_tag "linkedin_logo.png", size: "20x20"), "https://www.linkedin.com/in/lexxeous/"
               =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/Lexxeous"
         %br
@@ -282,7 +397,8 @@
             .flex-row
               =link_to "jpadair42@students.tntech.edu", "mailto:jpadair42@students.tntech.edu"
             .flex-row.pt-1
-              =link_to (image_tag "grey_linkedin_logo.png", size: "20x20"), welcome_path
+              =link_to (image_tag "handshake_logo.png", size: "20x20"), "https://tntech.joinhandshake.com/users/7593656"
+              =link_to (image_tag "linkedin_logo.png", size: "20x20"), "https://www.linkedin.com/in/joshua-adair-811904126/"
               =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/joshua.adair.71"
         %br
         .row.justify-content-start
@@ -297,6 +413,7 @@
             .flex-row
               =link_to "nmchulani42@students.tntech.edu", "mailto:nmchulani42@students.tntech.edu"
             .flex-row.pt-1
+              =link_to (image_tag "handshake_logo.png", size: "20x20"), "https://tntech.joinhandshake.com/users/7594978"
               =link_to (image_tag "grey_linkedin_logo.png", size: "20x20"), welcome_path
               =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/naveen.chulani"
         %br
@@ -312,7 +429,8 @@
             .flex-row
               =link_to "cciyizoba42@students.tntech.edu", "mailto:cciyizoba42@students.tntech.edu"
             .flex-row.pt-1
-              =link_to (image_tag "grey_linkedin_logo.png", size: "20x20"), welcome_path
+              =link_to (image_tag "handshake_logo.png", size: "20x20"), "https://tntech.joinhandshake.com/users/6559420"
+              =link_to (image_tag "linkedin_logo.png", size: "20x20"), "https://www.linkedin.com/in/clinton-iyizoba-a2090a124/"
               =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/chikwelueze.iyizoba"
         %br
         .row.justify-content-start
@@ -327,6 +445,7 @@
             .flex-row
               =link_to "fihashi42@students.tntech.edu", "mailto:fihashi42@students.tntech.edu"
             .flex-row.pt-1
+              =link_to (image_tag "handshake_logo.png", size: "20x20"), "https://tntech.joinhandshake.com/users/6563051"
               =link_to (image_tag "grey_linkedin_logo.png", size: "20x20"), welcome_path
               =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/fahmii2"
         %br
@@ -342,6 +461,7 @@
             .flex-row
               =link_to "jctilley42@students.tntech.edu", "mailto:jctilley42@students.tntech.edu"
             .flex-row.pt-1
+              =link_to (image_tag "grey_handshake_logo.png", size: "20x20"), welcome_path
               =link_to (image_tag "grey_linkedin_logo.png", size: "20x20"), welcome_path
               =link_to (image_tag "grey_facebook_logo.png", size: "20x20"), welcome_path
     -#------------------------------------------------------------------------------------------------------------------------------------------------------------------
