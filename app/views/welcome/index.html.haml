@@ -355,7 +355,7 @@
             %ul
               %li
                 01×
-                =link_to "5V DC Red LED", "https://hobbyking.com/en_us/led-5mm-red.html"
+                =link_to "Red 5V DC LED", "https://hobbyking.com/en_us/led-5mm-red.html"
                 (
                 %i optional
                 )
@@ -371,7 +371,10 @@
                 %i for simulating generator status
                 )
                 (
-                %i $variable
+                %i.prototype $variable
+                )
+                (
+                %i.consumer $0.00
                 )
               ( ≈
               %i.prototype $0.46
@@ -468,13 +471,15 @@
           %br
           %br
           %sup 1.
-          %i Protoype total cost was calculated based on the assumption that no hardware components are/were previously owned and that every component must be purchased individually.
+          %i Prototype total cost was calculated based on the assumption that no hardware components are/were previously owned and that every component must be purchased individually.
+          %br
           %br
           %sup 2.
-          %i Actual prototype cost was free of charge. All hardware components were readily avaliable and provided by Tennessee Technological University (TTU), the Electrical & Computer Engineering (ECE) department, and Dr. Michael A. Baswell.
+          %i Actual prototype cost was free of charge. All hardware components were readily available and provided by Tennessee Technological University (TTU), the Electrical & Computer Engineering (ECE) department, and Dr. Michael A. Baswell.
+          %br
           %br
           %sup 3.
-          %i Optimized consumer total cost was calculated based on the assumption that all hardware could be bought at wholesale (bulk) price and that no testing components needed to be purchased or used. Wholesale quanity is upwards of 1000+ units for some components.
+          %i Optimized consumer total cost was calculated based on the assumption that all hardware could be bought at wholesale (bulk) price and that no testing components needed to be purchased or used. Wholesale quantity is upwards of 1000+ units for some components.
           %br
       -#------------------------------------------------------------------------------------------------------------------------------------------------------------------
       .col-md-3.p-3
@@ -541,7 +546,7 @@
               =link_to "nmchulani42@students.tntech.edu", "mailto:nmchulani42@students.tntech.edu"
             .flex-row.pt-1
               =link_to (image_tag "handshake_logo.png", size: "20x20"), "https://tntech.joinhandshake.com/users/7594978"
-              =link_to (image_tag "grey_linkedin_logo.png", size: "20x20"), welcome_path
+              =link_to (image_tag "linkedin_logo.png", size: "20x20"), "https://www.linkedin.com/in/naveen-chulani-532920134/"
               =link_to (image_tag "facebook_logo.png", size: "20x20"), "https://www.facebook.com/naveen.chulani"
         %br
         .row.justify-content-start
@@ -550,7 +555,7 @@
               =image_tag "iyizoba_headshot.png", size: "100x100"
           .flex-col.bio
             .flex-row
-              %b Clinton C. Iyizoba
+              %b Chikwelueze C. Iyizoba
             .flex-row.pt-1
               %i Hardware Researcher, Asst. Presentation Lead.
             .flex-row
