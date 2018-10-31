@@ -24,13 +24,18 @@ Pomona B-24 male to male daisy chain test leads (https://www.digikey.com/product
 
 banana clamps (https://www.alliedelec.com/mueller-bu-60s/70188573/)
 
+Ebay Arduino: (https://www.ebay.com/itm/ATmega328P-CH340G-UNO-R3-Board-USB-Cable-Compatible-with-Arduino-L2/173019953288)
+
+Dinkle 10P press fit terminal jumper fuses (https://www.amazon.com/Dinkle-DSS4N-10P-Terminal-Press-Fit-Jumper/dp/B00R1WTWBI/)
+  26/100 connections
+
 The starter time is inaccurate, should be 2~3 seconds in tenths of second intervals
 the ON/OFF relay is not reading the generator status properly, read the status duing menu and bootup too
 define an absolute range for the minimum and maximum threshold values, delay time and starter time
   (right now they diverge ±infinitely)
 
 User specified:
-min voltage (x~x)?
-max voltage (x~x)?
-delay time (5~45 seconds)?
-starter time (2~3 seconds)
+min voltage (11.0~12.0)?
+max voltage (13.0~14.0)?
+delay time (20~60 seconds)
+starter time (2~3 seconds) in intervals of 0.1

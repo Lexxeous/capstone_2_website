@@ -1,3 +1,5 @@
+/ Declare Variable
+- thing = "LCD"
 .welcome
   .container-fluid
     .row#banner
@@ -36,30 +38,42 @@
       .col-md-5
         %center
           %h2 Welcome to the BBC Capstone Project Homepage!
+        %h5 Objective:
+        %p.justify-col
+          Our project objective was to create a cheaper hardware version of an automatic generator backup controller for an external battery than what already exists on the open market.
+          The hardware controller should automatically start and stop a generator based on the current external battery’s voltage levels.
+          The generator should automatically charge the battery when the voltage drops below a certain threshold value.
+          The generator should automatically turn off when the external battery is sufficiently charged.
         %h5 Project Description:
-        %p
+        %p.justify-col
           The Automatic Generator Battery Backup Controller (or simply
           =succeed "," do
             %i BBC
           as we call it) is a hardware system regulated by an
-          =succeed "." do
-            =link_to "Adruino Uno Microcontroller", "https://www.robotshop.com/en/arduino-uno-r3-usb-microcontroller.html"
+          =link_to "Adruino Uno Microcontroller", "https://www.ebay.com/itm/ATmega328P-CH340G-UNO-R3-Board-USB-Cable-Compatible-with-Arduino-L2/173019953288"
+          and controlled by a Arduino compatible
+          =link_to "Liquid Crystal Display", "https://en.wikipedia.org/wiki/Liquid-crystal_display"
+          (
+          %i LCD
+          ). The
+          %i BBC
+          system can help those who depend on solar power, especially those in developing nations. It eliminates the need to manually start and stop a generator, making the generator more convenient and efficient.
           %br
           %br
           The
           %i BBC
           system connects to general purpose generators and monitors an external battery's voltage. When the external battery's voltage drops below a user specified threshold (
-          %i xx.xV ~ 11.5V
+          %i 11.0V ~ 12.0V
           =succeed "," do
             )
           the
           %i BBC
           system activates the generator's starter, for a user specified amount of time (
-          %i 2.0s ~ 3.0s
+          %i 2.0s ~ 3.0s in increments of 0.1s
           =succeed "," do
             )
           in an attempt to power on the generator. If the generator successfully starts and the external battery's voltage reaches a separate user specified threshold (
-          %i 14.0V ~ xx.xV
+          %i 13.0V ~ 14.0V
           =succeed "," do
             )
           the
@@ -67,25 +81,80 @@
           system powers off the generator and waits for the external battery's voltage to deplete again, then repeats. If the generator fails to power on, the
           %i BBC
           system delays for a user specified amount of time (
-          %i xx ~ 30s
+          %i 20 ~ 60s
           =succeed "," do
             )
           before activating the generator's starter again. The
           %i BBC
-          system is only allowed 3 iterations of failed starter attempts in succession before displaying an error and taking appropriate action.
+          system is only allowed three iterations of failed starter attempts in succession before displaying an error and taking appropriate action.
           %br
           %br
           An
-          =link_to "Arduino LCD Keypad Shield Display", "https://www.banggood.com/Keypad-Shield-Blue-Backlight-For-Arduino-Robot-LCD-1602-Board-p-79326.html"
-          shows live information about the external battery's voltage and allows the user to control the minimum and maximum generator threshold voltages, the between-iteration delay time, and the generator's starter duration. If the attached generator does not power on within the alotted amount of starter time and iterations, the
+          =link_to "Arduino Keypad Shield Display", "https://www.banggood.com/Keypad-Shield-Blue-Backlight-For-Arduino-Robot-LCD-1602-Board-p-79326.html"
+          shows a main menu with live information about the external battery's voltage and allows the user to control the minimum and maximum generator threshold voltages, the between-iteration delay time, and the generator's starter duration. If the attached generator does not power on within the alotted amount of starter time and iterations, the
           %i BBC
           system displays an error message (
           %i Starter Failure!
-          ), lights up the red LED indicator, and halts itself to be reset. The
+          ), lights up the red
+          =link_to "Light Emitting Diode", "https://en.wikipedia.org/wiki/Light-emitting_diode"
+          (
+          %i LED
+          )
+          indicator, and halts itself to be reset. The
           %i BBC
-          system reset feature is to help reduce the likelyhood of the starter or generator burning out during operation.
+          system reset feature is to help prevent burn-out of the starter or generator during operation.
+          %br
+          %br
+          At any time while viewing the main menu, a user can toggle the system's automation status or adjust the system parameters.
+          Using the
+          %i UP
+          and
+          %i DOWN
+          buttons on the
+          %i LCD
+          allows the user set/toggle the automation status, determining if the system should automatically try to start and stop the generator, or not.
+          This feature is useful during system maintenance and any executive reasons for system stagnation.
+          Using the
+          %i LEFT
+          and
+          %i RIGHT
+          buttons allows the user to specify all the aforementioned "user specified values".
+          These values are moderately variable to give the user a more dynamic and optimized controller for their particular generator.
+          At any time within the parameter selection menu, the user can press
+          %i SELECT
+          to immediately leave the parameter selection menu and set all the parameter values to their current or changed states without needing to scroll through each parameter unecessarily.
+          The parameter selection feature also uses on-board
+          =link_to "Electronically Erasable Programmable Read-Only Memory", "https://en.wikipedia.org/wiki/EEPROM"
+          (
+          %i EEPROM
+          ) to read and set the parameter values.
+          This feature persists parameter values through menu changes, system resets, and power outages to easily keep optimized settings.
+          %br
+          %br
+          The
+          %i BBC
+          system also has a feature that turns off the
+          %i LCD
+          display after 10 or more seconds of user inactivity (not pressing any of the buttons on the
+          %i LCD
+          keypad). When the
+          %i LCD
+          is off and the user presses
+          %i SELECT
+          , the
+          %i LCD
+          turns on and the system returns to its current state.
+          If the user has set the automation status to "ON", the system will run as normal in the background, even if the
+          %i LCD
+          is off.
+          This inactivity feature is useful to save power/energy over the lifespan of the
+          %i BBC
+          system, to help prevent burn-out of the
+          =succeed "," do
+            %i LCD
+          and to help prevent unintentional system manipulation from outside sources.
           -#------------------------------------------------------------------------------------------------------------------------------------------------------------------
-          %h5 Hardware Used:
+          %h5 Hardware:
           .row.justify-content-center
             =image_tag "hardware.png", size: "250x425"
           %br
@@ -94,12 +163,12 @@
             %ul
               %li
                 01×
-                =link_to "Arduino Uno Microcontroller", "https://www.robotshop.com/en/arduino-uno-r3-usb-microcontroller.html"
+                =link_to "Arduino Uno Microcontroller", "https://www.ebay.com/itm/ATmega328P-CH340G-UNO-R3-Board-USB-Cable-Compatible-with-Arduino-L2/173019953288"
                 (
-                %i.prototype $21.99
+                %i.prototype $4.42
                 )
                 (
-                %i.consumer $19.99
+                %i.consumer $4.42
                 )
               %li
                 01×
@@ -111,10 +180,10 @@
                 %i.consumer $3.49
                 )
               (
-              %i.prototype $26.10
+              %i.prototype $8.53
               )
               (
-              %i.consumer $23.48
+              %i.consumer $7.91
               )
             %b Converters:
             %ul
@@ -324,18 +393,17 @@
                 %i.consumer $0.02831
                 )
               %li
-                16×
-                =link_to "Bussmann DSS4N-02P Jumper Bars", "https://www.galco.com/buy/Bussmann/DSS4N-02P"
+                =link_to "Dinkle DK4N Jumper Fuse Connections", "https://www.amazon.com/Dinkle-DSS4N-10P-Terminal-Press-Fit-Jumper/dp/B00R1WTWBI/"
                 (
                 %i as needed
                 )
                 (
-                %i.prototype $2.27
-                %i each
+                %i.prototype $27.98
+                %i for 100
                 )
                 (
-                %i.consumer $1.89
-                %i each
+                %i.consumer $7.2748
+                %i for 26
                 )
               %li
                 Rubber Color-Coated Copper Wiring
@@ -346,10 +414,10 @@
                 %i $variable
                 )
               ( ≈
-              %i.prototype $49.94
+              %i.prototype $34.99
               )
               ( ≈
-              %i.consumer $30.28519
+              %i.consumer $7.31999
               )
             %b Miscellaneous:
             %ul
@@ -388,17 +456,17 @@
               %li
                 %u Prototype Total:
                 ( ≈
-                %b.prototype $516.77
+                %b.prototype 484.25
                 )
                 %sup 1, 2
               %li
                 %u Optimized Consumer Total:
                 ( ≈
-                %b.consumer $98.21519
+                %b.consumer $59.67999
                 )
                 %sup 3
           -#------------------------------------------------------------------------------------------------------------------------------------------------------------------
-          %h5 Software Used:
+          %h5 Software:
           .row.justify-content-start.align-items-center.pl-3
             .flex-col.pr-3
               .flex-row
@@ -407,7 +475,10 @@
               .flex-row
                 =link_to "Arduino IDE", "https://www.arduino.cc/en/Main/Software"
                 %br
-                For modifying, uploading, and testing software for the BBC system.
+                .justify-col
+                  For modifying, uploading, and testing software for the
+                  %i BBC
+                  system.
           %br
           .row.justify-content-start.align-items-center.pl-3
             .flex-col.pr-3
@@ -417,7 +488,10 @@
               .flex-row
                 =link_to "AutoCAD", "https://www.autodesk.com/products/autocad/overview"
                 %br
-                For designing and drafting official pinout diagrams to represent the BBC system.
+                .justify-col
+                  For designing and drafting official pinout diagrams to represent the
+                  %i BBC
+                  system.
           %br
           .row.justify-content-start.align-items-center.pl-3
             .flex-col.pr-3
@@ -427,7 +501,10 @@
               .flex-row
                 =link_to "draw.io", "https://www.draw.io/"
                 %br
-                For designing and drafting overview connection diagrams to represent the BBC system.
+                .justify-col
+                  For designing and drafting overview connection diagrams to represent the
+                  %i BBC
+                  system.
           %br
           .row.justify-content-start.align-items-center.pl-3
             .flex-col.pr-3
@@ -437,7 +514,10 @@
               .flex-row
                 =link_to "GitHub", "https://github.com"
                 %br
-                For storing backups of and committing changes to all BBC project source code.
+                .justify-col
+                  For organizing and storing all backups of and committing changes to all
+                  %i BBC
+                  project source code.
           %br
           .row.justify-content-start.align-items-center.pl-3
             .flex-col.pr-3
@@ -447,7 +527,10 @@
               .flex-row
                 =link_to "Google Apps", "https://apps.google.com/user/hub"
                 %br
-                For creating, sharing, storing, and managing files amongst all team members for the BBC project.
+                .justify-col
+                  For creating, sharing, storing, and managing files amongst all team members for the
+                  %i BBC
+                  project.
           %br
           .row.justify-content-start.align-items-center.pl-3
             .flex-col.pr-3
@@ -457,7 +540,10 @@
               .flex-row
                 =link_to "Heroku", "https://dashboard.heroku.com/"
                 %br
-                For publically creating, deploying, and testing the BBC project homepage website.
+                .justify-col
+                  For publically creating, deploying, and testing the
+                  %i BBC
+                  project homepage website.
           %br
           .row.justify-content-start.align-items-center.pl-3
             .flex-col.pr-3
@@ -467,19 +553,23 @@
               .flex-row
                 =link_to "Ruby on Rails", "https://rubyonrails.org/"
                 %br
-                For locally designing, creating, and testing the BBC project homepage website.
+                .justify-col
+                  For locally designing, creating, and testing the
+                  %i BBC
+                  project homepage website.
           %br
           %br
           %sup 1.
-          %i Prototype total cost was calculated based on the assumption that no hardware components are/were previously owned and that every component must be purchased individually.
-          %br
+          %p.justify-col.footnote
+            Prototype total cost was calculated based on the assumption that no hardware components are/were previously owned and that every component must be purchased individually.
           %br
           %sup 2.
-          %i Actual prototype cost was free of charge. All hardware components were readily available and provided by Tennessee Technological University (TTU), the Electrical & Computer Engineering (ECE) department, and Dr. Michael A. Baswell.
-          %br
+          %p.justify-col.footnote
+            Actual prototype cost was free of charge. All hardware components were readily available and provided by Tennessee Technological University ( TTU ), the Electrical & Computer Engineering ( ECE ) department, and Dr. Michael A. Baswell.
           %br
           %sup 3.
-          %i Optimized consumer total cost was calculated based on the assumption that all hardware could be bought at wholesale (bulk) price and that no testing components needed to be purchased or used. Wholesale quantity is upwards of 1000+ units for some components.
+          %p.justify-col.footnote
+            Optimized consumer total cost was calculated based on the assumption that all hardware could be bought at wholesale ( bulk ) price and that no testing components needed to be purchased or used. Wholesale quantity is upwards of 1000+ units for some components.
           %br
       -#------------------------------------------------------------------------------------------------------------------------------------------------------------------
       .col-md-3.p-3
@@ -525,7 +615,7 @@
             .flex-row
               %b Joshua P. Adair
             .flex-row.pt-1
-              %i Arduino & Software Research and Implementation.
+              %i Software Lead, Arduino Research and Implementation.
             .flex-row
               =link_to "jpadair42@students.tntech.edu", "mailto:jpadair42@students.tntech.edu"
             .flex-row.pt-1
@@ -584,7 +674,7 @@
         .row.justify-content-start
           .flex-col.pr-3
             .flex-row
-              =image_tag "blank_headshot.png", size: "100x100"
+              =image_tag "tilley_headshot.png", size: "100x100"
           .flex-col.bio
             .flex-row
               %b Jeff C. Tilley
@@ -593,14 +683,14 @@
             .flex-row
               =link_to "jctilley42@students.tntech.edu", "mailto:jctilley42@students.tntech.edu"
             .flex-row.pt-1
-              =link_to (image_tag "grey_handshake_logo.png", size: "20x20"), welcome_path
+              =link_to (image_tag "handshake_logo.png", size: "20x20"), "https://tntech.joinhandshake.com/users/7590132"
               =link_to (image_tag "grey_linkedin_logo.png", size: "20x20"), welcome_path
               =link_to (image_tag "grey_facebook_logo.png", size: "20x20"), welcome_path
     -#------------------------------------------------------------------------------------------------------------------------------------------------------------------
     .row.pt-3.justify-content-center
-      %i Special thanks to Tennessee Technological University, the Electrical & Computer Engineering
+      .special-thanks Special thanks to Tennessee Technological University, the Electrical & Computer Engineering
     .row.p-0.justify-content-center
-      %i department, and Dr. Michael A. Baswell for sponsoring this project.
+      .special-thanks department, and Dr. Michael A. Baswell for sponsoring this project.
     .row.py-3.justify-content-center
       =link_to (image_tag "ttu_logo.png", size: "150x150"), "https://www.tntech.edu/"
     -#------------------------------------------------------------------------------------------------------------------------------------------------------------------
