@@ -1,5 +1,5 @@
-/ Declare Variable
-- thing = "LCD"
+=content_for :title, "Capstone 2: BBC Project"
+
 .welcome
   .container-fluid
     .row#banner
@@ -90,7 +90,7 @@
           %br
           %br
           An
-          =link_to "Arduino Keypad Shield Display", "https://www.banggood.com/Keypad-Shield-Blue-Backlight-For-Arduino-Robot-LCD-1602-Board-p-79326.html"
+          =link_to "Arduino Compatible Keypad Shield Display", "https://www.banggood.com/Keypad-Shield-Blue-Backlight-For-Arduino-Robot-LCD-1602-Board-p-79326.html"
           shows a main menu with live information about the external battery's voltage and allows the user to control the minimum and maximum generator threshold voltages, the between-iteration delay time, and the generator's starter duration. If the attached generator does not power on within the alotted amount of starter time and iterations, the
           %i BBC
           system displays an error message (
@@ -155,422 +155,313 @@
           and to help prevent unintentional system manipulation from outside sources.
           -#------------------------------------------------------------------------------------------------------------------------------------------------------------------
           %h5 Hardware:
-          .row.justify-content-center
+
+          .row.justify-content-center.mb-5
             =image_tag "hardware.png", size: "250x425"
-          %br
-          %ul
-            %b Microcontroller Hardware:
-            %ul
-              %li
-                01×
+
+          .row.justify-content-center.table_title.mb-2
+            Prototype vs. Optimized Consumer Hardware Cost
+
+          %table.mb-2
+            %tr.headings
+              %th.heading Category
+              %th.heading Component
+              %th.heading Quantity
+              %th.heading Prototype
+              %th.heading Consumer
+            %tr.row_group
+              %td.table_category Microcontroller
+              %td.table_component
                 =link_to "Arduino Uno Microcontroller", "https://www.ebay.com/itm/ATmega328P-CH340G-UNO-R3-Board-USB-Cable-Compatible-with-Arduino-L2/173019953288"
-                (
-                %i.prototype $4.42
-                )
-                (
-                %i.consumer $4.42
-                )
-              %li
-                01×
-                =link_to "Arduino LCD Keypad Shield Display", "https://www.banggood.com/Keypad-Shield-Blue-Backlight-For-Arduino-Robot-LCD-1602-Board-p-79326.html"
-                (
-                %i.prototype $4.11
-                )
-                (
-                %i.consumer $3.49
-                )
-              (
-              %i.prototype $8.53
-              )
-              (
-              %i.consumer $7.91
-              )
-            %b Converters:
-            %ul
-              %li
-                01×
+              %td.table_quantity 1 / 1
+              %td.table_prototype 4.42000
+              %td.table_consumer 4.42000
+            %tr
+              %td.table_category
+              %td.table_component
+                =link_to "Arduino Compatible Keypad Shield Display", "https://www.banggood.com/Keypad-Shield-Blue-Backlight-For-Arduino-Robot-LCD-1602-Board-p-79326.html"
+              %td.table_quantity 1 / 1
+              %td.table_prototype 4.11000
+              %td.table_consumer 3.49000
+            %tr.row_group
+              %td.table_category Regulator
+              %td.table_component
                 =link_to "SUPERNIGHT 12V~24V DC to 5V DC Voltage Regulator", "http://www.supernight.cc/supernight-tm-led-strip-strings-power-supply-dc-12v-24v-to-5v-10a-50w-dc-volt-converter-step-down-regulator-dc-voltage-transformer.html"
-                (
-                %i.prototype $9.99
-                )
-                (
-                %i.consumer $9.99
-                )
-              (
-              %i.prototype $9.99
-              )
-              (
-              %i.consumer $9.99
-              )
-            %b Relays:
-            %ul
-              %li
-                02×
+              %td.table_quantity 1 / 1
+              %td.table_prototype 9.99000
+              %td.table_consumer 9.99000
+            %tr.row_group
+              %td.table_category Relay
+              %td.table_component
                 =link_to "Songle SRD-05VDC-SL-C Relays", "https://www.banggood.com/Mini-5V-DC-Power-Relay-SRD5VDCSLC-5-Pin-PCB-Type-p-930170.html"
-                (
-                %i.prototype $1.07
-                %i each
-                )
-                (
-                %i.consumer $1.07
-                %i each
-                )
-              %li
-                01×
+              %td.table_quantity 2 / 2
+              %td.table_prototype 2.14000
+              %td.table_consumer 2.14000
+            %tr
+              %td.table_category
+              %td.table_component
                 =link_to "Cutler-Hammer D4PR2A DPDT 120V AC Relay", "https://www.newark.com/eaton-cutler-hammer/d4pr2a/relay-dpdt-240vac-30vdc-5a-socket/dp/46K6469"
-                (
-                %i.prototype $15.70
-                )
-                (
-                %i.consumer $9.79
-                )
-              (
-              %i.prototype $17.84
-              )
-              (
-              %i.consumer $11.93
-              )
-            %b Terminal Hardware:
-            %ul
-              %li
-                28×
+              %td.table_quantity 1 / 1
+              %td.table_prototype 15.70000
+              %td.table_consumer 9.79000
+            %tr.row_group
+              %td.table_category Terminal
+              %td.table_component
                 =link_to "Dinkle DK4N Terminal Blocks", "https://www.amazon.com/Dinkle-DK4N-BL-Terminal-Block-10-22AWG/dp/B00R1WU460/"
+              %td.table_quantity 100 / 28
+              %td.table_prototype 41.21000
+              %td.table_consumer 11.54000
+            %tr.row_group
+              %td.table_category Mounting
+              %td.table_component
+                =link_to "WAGO DIN Rail", "https://www.newark.com/wago/210-162/din-rail/dp/28H9089"
                 (
-                %i.prototype $41.21
-                %i for 100 units
+                %i 1.0m
                 )
-                (
-                %i.consumer $11.54
-                %i for 28 units
-                )
-              (
-              %i.prototype $41.21
-              )
-              (
-              %i.consumer $11.54
-              )
-            %b Mounting Hardware:
-            %ul
-              %li
-                01×
-                =link_to "DIN Mounting Rail", "https://www.newark.com/wago/210-162/din-rail/dp/28H9089"
-                (
-                %i ≥ 21.5cm
-                )
-                (
-                %i.prototype $7.86
-                %i for 1m
-                )
-                (
-                %i.consumer $1.53
-                %i for 21.5cm
-                )
-              %li
-                02×
+              %td.table_quantity 1 / 0.215
+              %td.table_prototype 7.86000
+              %td.table_consumer 1.31150
+            %tr
+              %td.table_category
+              %td.table_component
                 =link_to "YKS 5V Active Low 1-Channel Relay Mounting Boards", "https://www.newegg.com/Product/Product.aspx?Item=9SIA9083852861"
-                (
-                %i.prototype $2.89
-                )
-                (
-                %i.consumer $2.89
-                )
-              %li
-                01×
+              %td.table_quantity 2 / 2
+              %td.table_prototype 2.89000
+              %td.table_consumer 2.89000
+            %tr
+              %td.table_category
+              %td.table_component
                 =link_to "Omron P2RF-08-E Relay Socket", "https://www.digikey.com/product-detail/en/omron-automation-and-safety/P2RF-08-E/Z207-ND/"
-                (
-                %i.prototype $10.48
-                )
-                (
-                %i.consumer $6.11
-                )
-              %li
-                01× Metal Base Plate
+              %td.table_quantity 1 / 1
+              %td.table_prototype 10.48000
+              %td.table_consumer 6.11000
+            %tr
+              %td.table_category
+              %td.table_component
+                Metal Base Plate
                 (
                 %i 23.0cm x 14.7cm x 0.2cm
                 )
-                (
-                %i $variable
-                )
-              %li
-                Mounting Screws and Bolts
-                (
-                %i as needed
-                )
-                (
-                %i $variable
-                )
-              ( ≈
-              %i.prototype $21.23
-              )
-              ( ≈
-              %i.consumer $10.53
-              )
-            %b Power:
-            %ul
-              %li
-                01×
+              %td.table_quantity 1 / 1
+              %td.table_prototype variable
+              %td.table_consumer variable
+            %tr
+              %td.table_category
+              %td.table_component Screw and Bolts
+              %td.table_quantity as needed
+              %td.table_prototype variable
+              %td.table_consumer variable
+            %tr.row_group
+              %td.table_category Power
+              %td.table_component
                 =link_to "Tektronix PS283 DC Power Supply", "https://www.used-line.com/power-supplies/tektronix/tektronix-ps283/item-11173482"
-                ( ≈
-                %i.prototype $350.00
-                )
-                (
-                %i.consumer $0.00
-                )
-              %li
-                01× 120V AC 60Hz Socket
-                (
-                %i for simulating powered generator
-                )
-                (
-                %i.prototype $0.00
-                )
-                (
-                %i.consumer $0.00
-                )
-              ( ≈
-              %i.prototype $350.00
-              )
-              (
-              %i.consumer $0.00
-              )
-            %b Connectivity:
-            %ul
-              %li
-                02×
+              %td.table_quantity 1 / 1
+              %td.table_prototype 350.00000
+              %td.table_consumer N/A
+            %tr
+              %td.table_category
+              %td.table_component 120V AC 60Hz Socket
+              %td.table_quantity 1 / 1
+              %td.table_prototype 0.00000
+              %td.table_consumer N/A
+            %tr.row_group
+              %td.table_category Connectivity
+              %td.table_component
                 =link_to "Pomona B-24 Banana to Banana Test Leads", "https://www.digikey.com/product-detail/en/pomona-electronics/B-24-2/501-1046-ND/"
-                (
-                %i.prototype $6.09
-                )
-                (
-                %i.consumer $0.00
-                )
-              %li
-                02×
-                =link_to "Banana Barrel Alligator Clips", "https://www.alliedelec.com/mueller-bu-60s/70188573/"
-                (
-                %i.prototype $0.52
-                )
-                (
-                %i.consumer $0.00
-                )
-              %li
-                01×
+              %td.table_quantity 2 / 2
+              %td.table_prototype 6.09000
+              %td.table_consumer N/A
+            %tr
+              %td.table_category
+              %td.table_component
+                =link_to "Mueller BU-60S Alligator Clips", "https://www.alliedelec.com/mueller-bu-60s/70188573/"
+              %td.table_quantity 2 / 2
+              %td.table_prototype 0.52000
+              %td.table_consumer N/A
+            %tr
+              %td.table_category
+              %td.table_component
                 =link_to "75kΩ ± 5% Resistor", "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/CF14JT75K0/CF14JT75K0CT-ND/"
                 (
                 %i for voltage divider
                 )
-                (
-                %i.prototype $0.10
-                )
-                (
-                %i.consumer $0.00784
-                )
-              %li
-                01×
+              %td.table_quantity 1 / 1
+              %td.table_prototype 0.10000
+              %td.table_consumer 0.00784
+            %tr
+              %td.table_category
+              %td.table_component
                 =link_to "15kΩ ± 5% Resistor", "https://www.digikey.com/product-detail/en/stackpole-electronics-inc/CF18JT15K0/CF18JT15K0CT-ND"
                 (
                 %i for voltage divider
                 )
-                (
-                %i.prototype $0.10
-                )
-                (
-                %i.consumer $0.00904
-                )
-              %li
-                01×
+              %td.table_quantity 1 / 1
+              %td.table_prototype 0.10000
+              %td.table_consumer 0.00904
+            %tr
+              %td.table_category
+              %td.table_component
                 =link_to "200Ω ± 1% Resistor", "https://www.digikey.com/product-detail/en/vishay-bc-components/SFR16S0002000FR500/PPC200XCT-ND/"
                 (
                 %i for red LED
                 )
-                (
-                %i optional
-                )
-                (
-                %i.prototype $0.20
-                )
-                (
-                %i.consumer $0.02831
-                )
-              %li
-                =link_to "Dinkle DK4N Jumper Fuse Connections", "https://www.amazon.com/Dinkle-DSS4N-10P-Terminal-Press-Fit-Jumper/dp/B00R1WTWBI/"
-                (
-                %i as needed
-                )
-                (
-                %i.prototype $27.98
-                %i for 100
-                )
-                (
-                %i.consumer $7.2748
-                %i for 26
-                )
-              %li
-                Rubber Color-Coated Copper Wiring
-                (
-                %i as needed
-                )
-                (
-                %i $variable
-                )
-              ( ≈
-              %i.prototype $34.99
-              )
-              ( ≈
-              %i.consumer $7.31999
-              )
-            %b Miscellaneous:
-            %ul
-              %li
-                01×
+              %td.table_quantity 1 / 1
+              %td.table_prototype 0.20000
+              %td.table_consumer 0.02831
+            %tr
+              %td.table_category
+              %td.table_component
+                =link_to "Dinkle DSS4N-10P Jumper Connections", "https://www.amazon.com/Dinkle-DSS4N-10P-Terminal-Press-Fit-Jumper/dp/B00R1WTWBI/"
+              %td.table_quantity 100 / 26
+              %td.table_prototype 27.98000
+              %td.table_consumer 7.27480
+            %tr
+              %td.table_category
+              %td.table_component Insulated Copper Wiring
+              %td.table_quantity as needed
+              %td.table_prototype varibale
+              %td.table_consumer variable
+            %tr.row_group
+              %td.table_category Miscellaneous
+              %td.table_component
                 =link_to "Red 5V DC LED", "https://hobbyking.com/en_us/led-5mm-red.html"
                 (
                 %i optional
                 )
-                (
-                %i.prototype $0.46
-                )
-                (
-                %i.consumer $0.46
-                )
-              %li
-                120V AC 60Hz ON/OFF Switch
-                (
-                %i for simulating generator status
-                )
-                (
-                %i.prototype $variable
-                )
-                (
-                %i.consumer $0.00
-                )
-              ( ≈
-              %i.prototype $0.46
-              )
-              ( ≈
-              %i.consumer $0.46
-              )
-            %br
-            %b Totals:
-            %ul
-              %li
-                %u Prototype Total:
-                ( ≈
-                %b.prototype 484.25
-                )
-                %sup 1, 2
-              %li
-                %u Optimized Consumer Total:
-                ( ≈
-                %b.consumer $59.67999
-                )
-                %sup 3
+              %td.table_quantity 1 / 1
+              %td.table_prototype 0.46000
+              %td.table_consumer 0.460000
+            %tr
+              %td.table_category
+              %td.table_component 120V AC 60Hz Switch
+              %td.table_quantity 1 / 1
+              %td.table_prototype variable
+              %td.table_consumer N/A
+            %tr.row_group.totals
+              %td.table_category Total ($USD)
+              %td.table_component
+              %td.table_quantity
+              %td.table_prototype 484.25000
+              %td.table_consumer 59.67999
+
+          .row.mb-3.px-3
+            %p
+              Using the International System of Units (SI Units); V = volt, m = meters, Ω = ohm, kΩ = kiloohm, Hz = hertz.
+              %sup 1, 2, 3
+
           -#------------------------------------------------------------------------------------------------------------------------------------------------------------------
           %h5 Software:
-          .row.justify-content-start.align-items-center.pl-3
-            .flex-col.pr-3
-              .flex-row
-                =image_tag "arduino_logo.png", size: "80x80"
-            .flex-col.bio
-              .flex-row
-                =link_to "Arduino IDE", "https://www.arduino.cc/en/Main/Software"
-                %br
-                .justify-col
-                  For modifying, uploading, and testing software for the
-                  %i BBC
-                  system.
-          %br
-          .row.justify-content-start.align-items-center.pl-3
-            .flex-col.pr-3
-              .flex-row
-                =image_tag "autocad_logo.png", size: "80x80"
-            .flex-col.bio
-              .flex-row
-                =link_to "AutoCAD", "https://www.autodesk.com/products/autocad/overview"
-                %br
-                .justify-col
-                  For designing and drafting official pinout diagrams to represent the
-                  %i BBC
-                  system.
-          %br
-          .row.justify-content-start.align-items-center.pl-3
-            .flex-col.pr-3
-              .flex-row
-                =image_tag "draw_io_logo.png", size: "80x80"
-            .flex-col.bio
-              .flex-row
-                =link_to "draw.io", "https://www.draw.io/"
-                %br
-                .justify-col
-                  For designing and drafting overview connection diagrams to represent the
-                  %i BBC
-                  system.
-          %br
-          .row.justify-content-start.align-items-center.pl-3
-            .flex-col.pr-3
-              .flex-row
-                =image_tag "github_logo.png", size: "80x80"
-            .flex-col.bio
-              .flex-row
-                =link_to "GitHub", "https://github.com"
-                %br
-                .justify-col
-                  For organizing and storing all backups of and committing changes to all
-                  %i BBC
-                  project source code.
-          %br
-          .row.justify-content-start.align-items-center.pl-3
-            .flex-col.pr-3
-              .flex-row
-                =image_tag "google_apps_logo.png", size: "80x60"
-            .flex-col.bio
-              .flex-row
-                =link_to "Google Apps", "https://apps.google.com/user/hub"
-                %br
-                .justify-col
-                  For creating, sharing, storing, and managing files amongst all team members for the
-                  %i BBC
-                  project.
-          %br
-          .row.justify-content-start.align-items-center.pl-3
-            .flex-col.pr-3
-              .flex-row.pr-3
-                =image_tag "heroku_logo.png", size: "62x75"
-            .flex-col.bio
-              .flex-row
-                =link_to "Heroku", "https://dashboard.heroku.com/"
-                %br
-                .justify-col
-                  For publically creating, deploying, and testing the
-                  %i BBC
-                  project homepage website.
-          %br
-          .row.justify-content-start.align-items-center.pl-3
-            .flex-col.pr-3
-              .flex-row.pr-3
-                =image_tag "ror_logo.png", size: "62x75"
-            .flex-col.bio
-              .flex-row
-                =link_to "Ruby on Rails", "https://rubyonrails.org/"
-                %br
-                .justify-col
-                  For locally designing, creating, and testing the
-                  %i BBC
-                  project homepage website.
-          %br
-          %br
-          %sup 1.
-          %p.justify-col.footnote
-            Prototype total cost was calculated based on the assumption that no hardware components are/were previously owned and that every component must be purchased individually.
-          %br
-          %sup 2.
-          %p.justify-col.footnote
-            Actual prototype cost was free of charge. All hardware components were readily available and provided by Tennessee Technological University ( TTU ), the Electrical & Computer Engineering ( ECE ) department, and Dr. Michael A. Baswell.
-          %br
-          %sup 3.
-          %p.justify-col.footnote
-            Optimized consumer total cost was calculated based on the assumption that all hardware could be bought at wholesale ( bulk ) price and that no testing components needed to be purchased or used. Wholesale quantity is upwards of 1000+ units for some components.
-          %br
+          .col.p-0.mb-5
+            .row.justify-content-start.align-items-center.pl-3
+              .flex-col.pr-3
+                .flex-row
+                  =image_tag "arduino_logo.png", size: "80x80"
+              .flex-col.bio
+                .flex-row
+                  =link_to "Arduino IDE", "https://www.arduino.cc/en/Main/Software"
+                  %br
+                  .justify-col
+                    For modifying, uploading, and testing software for the
+                    %i BBC
+                    system.
+            %br
+            .row.justify-content-start.align-items-center.pl-3
+              .flex-col.pr-3
+                .flex-row
+                  =image_tag "autocad_logo.png", size: "80x80"
+              .flex-col.bio
+                .flex-row
+                  =link_to "AutoCAD", "https://www.autodesk.com/products/autocad/overview"
+                  %br
+                  .justify-col
+                    For designing and drafting official pinout diagrams to represent the
+                    %i BBC
+                    system.
+            %br
+            .row.justify-content-start.align-items-center.pl-3
+              .flex-col.pr-3
+                .flex-row
+                  =image_tag "draw_io_logo.png", size: "80x80"
+              .flex-col.bio
+                .flex-row
+                  =link_to "draw.io", "https://www.draw.io/"
+                  %br
+                  .justify-col
+                    For designing and drafting overview connection diagrams to represent the
+                    %i BBC
+                    system.
+            %br
+            .row.justify-content-start.align-items-center.pl-3
+              .flex-col.pr-3
+                .flex-row
+                  =image_tag "github_logo.png", size: "80x80"
+              .flex-col.bio
+                .flex-row
+                  =link_to "GitHub", "https://github.com"
+                  %br
+                  .justify-col
+                    For organizing and storing all backups of and committing changes to all
+                    %i BBC
+                    project source code.
+            %br
+            .row.justify-content-start.align-items-center.pl-3
+              .flex-col.pr-3
+                .flex-row
+                  =image_tag "google_apps_logo.png", size: "80x60"
+              .flex-col.bio
+                .flex-row
+                  =link_to "Google Apps", "https://apps.google.com/user/hub"
+                  %br
+                  .justify-col
+                    For creating, sharing, storing, and managing files amongst all team members for the
+                    %i BBC
+                    project.
+            %br
+            .row.justify-content-start.align-items-center.pl-3
+              .flex-col.pr-3
+                .flex-row.pr-3
+                  =image_tag "heroku_logo.png", size: "62x75"
+              .flex-col.bio
+                .flex-row
+                  =link_to "Heroku", "https://dashboard.heroku.com/"
+                  %br
+                  .justify-col
+                    For publically creating, deploying, and testing the
+                    %i BBC
+                    project homepage website.
+            %br
+            .row.justify-content-start.align-items-center.pl-3
+              .flex-col.pr-3
+                .flex-row.pr-3
+                  =image_tag "ror_logo.png", size: "62x75"
+              .flex-col.bio
+                .flex-row
+                  =link_to "Ruby on Rails", "https://rubyonrails.org/"
+                  %br
+                  .justify-col
+                    For locally designing, creating, and testing the
+                    %i BBC
+                    project homepage website.
+          -#------------------------------------------------------------------------------------------------------------------------------------------------------------------
+          .col.p-0.mb-5
+            %small
+              .justify-col
+                1. Prototype total cost was calculated based on the assumption that no hardware components are/were previously owned and that every component must be purchased individually.
+              %br
+            %small
+              .justify-col
+                2. Actual prototype total cost was free of charge. All hardware components were readily available and provided by Tennessee Technological University
+                (
+                %i TTU
+                )
+                , the Electrical & Computer Engineering
+                (
+                %i ECE
+                ) department, and Dr. Michael A. Baswell.
+              %br
+            %small
+              .justify-col
+                3. Optimized consumer total cost was calculated based on the assumption that all hardware could be bought at wholesale price and that no testing components needed to be purchased or used. Wholesale quantity is upwards of 1000+ units for some components.
       -#------------------------------------------------------------------------------------------------------------------------------------------------------------------
       .col-md-3.p-3
         .row.justify-content-start
@@ -688,9 +579,11 @@
               =link_to (image_tag "grey_facebook_logo.png", size: "20x20"), welcome_path
     -#------------------------------------------------------------------------------------------------------------------------------------------------------------------
     .row.pt-3.justify-content-center
-      .special-thanks Special thanks to Tennessee Technological University, the Electrical & Computer Engineering
+      %small
+        %i Special thanks to Tennessee Technological University, the Electrical & Computer Engineering
     .row.p-0.justify-content-center
-      .special-thanks department, and Dr. Michael A. Baswell for sponsoring this project.
+      %small
+        %i department, and Dr. Michael A. Baswell for sponsoring this project.
     .row.py-3.justify-content-center
       =link_to (image_tag "ttu_logo.png", size: "150x150"), "https://www.tntech.edu/"
     -#------------------------------------------------------------------------------------------------------------------------------------------------------------------
