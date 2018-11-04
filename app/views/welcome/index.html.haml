@@ -15,11 +15,11 @@
             %li
               =link_to "Project Paper", "test_pdf.pdf"
             %li
-              =link_to "Project Poster", "test_pdf.pdf"
+              =link_to "Project Poster", "BBC Project Poster.pdf"
             %li
               =link_to "Project Presentation", "test_pdf.pdf"
             %li
-              =link_to "Wiring Overview Diagram", "test_pdf.pdf"
+              =link_to "Wiring Overview Diagram", "Block Diagram White.pdf"
             %li
               =link_to "AutoCAD Diagrams", "test_pdf.pdf"
             %li
@@ -50,8 +50,8 @@
           =succeed "," do
             %i BBC
           as we call it) is a hardware system regulated by an
-          =link_to "Adruino Uno Microcontroller", "https://www.ebay.com/itm/ATmega328P-CH340G-UNO-R3-Board-USB-Cable-Compatible-with-Arduino-L2/173019953288"
-          and controlled by a Arduino compatible
+          =link_to "Adruino Uno Microcontroller", "https://store.arduino.cc/usa/arduino-uno-rev3"
+          and controlled by an Arduino compatible
           =link_to "Liquid Crystal Display", "https://en.wikipedia.org/wiki/Liquid-crystal_display"
           (
           %i LCD
@@ -69,7 +69,7 @@
           the
           %i BBC
           system activates the generator's starter, for a user specified amount of time (
-          %i 2.0s ~ 3.0s in increments of 0.1s
+          %i 2.0s ~ 3.0s
           =succeed "," do
             )
           in an attempt to power on the generator. If the generator successfully starts and the external battery's voltage reaches a separate user specified threshold (
@@ -112,13 +112,15 @@
           %i DOWN
           buttons on the
           %i LCD
-          allows the user set/toggle the automation status, determining if the system should automatically try to start and stop the generator, or not.
+          allows the user to set/toggle the automation status, determining if the system should automatically try to start and stop the generator, or not.
           This feature is useful during system maintenance and any executive reasons for system stagnation.
           Using the
           %i LEFT
           and
           %i RIGHT
-          buttons allows the user to specify all the aforementioned "user specified values".
+          buttons on the
+          %i LCD
+          allows the user to specify all the aforementioned "user specified values" as system parameters.
           These values are moderately variable to give the user a more dynamic and optimized controller for their particular generator.
           At any time within the parameter selection menu, the user can press
           %i SELECT
@@ -140,8 +142,9 @@
           keypad). When the
           %i LCD
           is off and the user presses
-          %i SELECT
-          , the
+          =succeed "," do
+            %i SELECT
+          the
           %i LCD
           turns on and the system returns to its current state.
           If the user has set the automation status to "ON", the system will run as normal in the background, even if the
@@ -159,7 +162,7 @@
           .row.justify-content-center.mb-5
             =image_tag "hardware.png", size: "250x425"
 
-          .row.justify-content-center.table_title.mb-2
+          .row.justify-content-center.mb-2
             Prototype vs. Optimized Consumer Hardware Cost
 
           %table.mb-2
