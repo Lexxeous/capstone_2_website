@@ -1,24 +1,6 @@
-# README
+This repository is for the creation and deployment of the BBC Capstone 2 Project homepage/website.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+All documents and information can be found by following these two links:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Alternate Project Repo: https://github.com/Lexxeous/capstone_2_arduino
+* Project Homepage: https://capstone-2-bbc.herokuapp.com/
