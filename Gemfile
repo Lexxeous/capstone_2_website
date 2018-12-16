@@ -9,6 +9,7 @@ end
 
 ruby "2.5.0"
 gem "bootstrap"
+gem "bundler", ">= 1.17"
 # Use CoffeeScript for .coffee assets and views
 gem "coffee-rails", "~> 4.2"
 gem "haml"

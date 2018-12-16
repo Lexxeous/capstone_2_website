@@ -203,6 +203,7 @@ PLATFORMS
 DEPENDENCIES
   better_errors
   bootstrap
+  bundler (>= 1.17)
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
@@ -230,4 +231,4 @@ RUBY VERSION
    ruby 2.5.0p0
 
 BUNDLED WITH
-   1.16.6
+   1.17.2
