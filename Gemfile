@@ -12,11 +12,13 @@ gem "bootstrap"
 # Use CoffeeScript for .coffee assets and views
 gem "coffee-rails", "~> 4.2"
 gem "haml"
+gem "loofah", ">= 2.2.3"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem "jbuilder", "~> 2.5"
 gem "jquery-rails"
 # Use Puma as the app server
 gem "puma"
+gem "rack", ">= 2.0.6"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 5.1.6"
 # Use SCSS for stylesheets
