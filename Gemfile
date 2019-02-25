@@ -8,7 +8,7 @@ git_source(:github) do |repo_name|
 end
 
 ruby "2.5.0"
-gem "bootstrap"
+gem "bootstrap", ">= 4.3.1"
 gem "bundler", ">= 1.17"
 # Use CoffeeScript for .coffee assets and views
 gem "coffee-rails", "~> 4.2"
