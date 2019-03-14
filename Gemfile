@@ -8,7 +8,10 @@ git_source(:github) do |repo_name|
 end
 
 ruby "2.5.0"
-gem "bootstrap"
+# Use "actionview" for rendering
+gem "actionview", ">= 5.1.6.2"
+# Use "bootstrap" for CSS styling
+gem "bootstrap", ">= 4.3.1"
 gem "bundler", ">= 1.17"
 # Use CoffeeScript for .coffee assets and views
 gem "coffee-rails", "~> 4.2"
@@ -33,6 +36,7 @@ gem "uglifier", ">= 1.3.0"
 # gem "therubyracer", platforms: :ruby
 # Use Capistrano for deployment
 # gem "capistrano-rails", group: :development
+
 
 group :development, :test do
   gem "better_errors"
