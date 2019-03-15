@@ -7,7 +7,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-ruby "2.5.0"
+ruby "2.6.2"
 # Use "actionview" for rendering
 gem "actionview", ">= 5.1.6.2"
 # Use "bootstrap" for CSS styling
